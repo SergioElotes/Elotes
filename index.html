@@ -9,9 +9,7 @@
       --maxw: 1200px;
       --gap: 16px;
     }
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, sans-serif;
@@ -20,78 +18,58 @@
     header {
       padding: 24px 16px;
       text-align: center;
-      background: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     header h1 {
       margin: 0;
       font-size: 28px;
     }
     header p {
-      margin: 6px 0 0;
+      margin: 6px 0 12px;
       color: #666;
-      font-size: 18px;
     }
-    .whatsapp-button {
-      display: inline-block;
-      margin-top: 12px;
-      background-color: #25d366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 25px;
+
+    .wa-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      padding: 10px 14px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 700;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: background 0.3s;
+      border-radius: 999px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.12);
     }
-    .whatsapp-button:hover {
-      background-color: #1ebc5b;
-    }
-    .container {
-      max-width: var(--maxw);
-      margin: auto;
-      padding: 16px;
-    }
+    .wa-btn:hover { filter: brightness(1.06); }
+
+    .container { max-width: var(--maxw); margin: auto; padding: 16px; }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
       gap: var(--gap);
     }
     .card {
       background: #fff;
       border: 1px solid #ddd;
       overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.1);
       display: flex;
       flex-direction: column;
       transition: transform .12s ease;
+      border-radius: 12px;
     }
-    .card:hover {
-      transform: scale(1.02);
-    }
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .card .body {
-      padding: 12px;
-    }
-    .card .name {
-      margin: 0;
-      font-size: 20px;
-    }
-    .card .price {
-      margin: 6px 0 0;
-      color: #e67e22;
-      font-weight: bold;
-    }
+    .card:hover { transform: scale(1.02); }
+    .card img { width: 100%; height: auto; display:block; }
+    .card .body { padding: 12px; }
+    .card .name { margin: 0 0 6px; font-size: 18px; }
+    .card .price { margin: 0; color: #e67e22; font-weight: bold; }
+
     footer {
       text-align: center;
       color: #888;
-      font-size: 14px;
       padding: 16px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -99,15 +77,17 @@
   <header>
     <h1>Elotes y Chorreados "Diego"</h1>
     <p>¡Bienvenido! Elige tu antojo 👇</p>
-    <a href="https://wa.me/526562562920" class="whatsapp-button" target="_blank">
-      📱 Haz tu pedido por WhatsApp
+    <a class="wa-btn"
+       href="https://wa.me/526562562920?text=Hola%20quiero%20hacer%20un%20pedido%20de%20Elotes%20y%20Chorreados"
+       target="_blank" rel="noopener">
+       📱 Haz tu pedido por WhatsApp
     </a>
   </header>
 
   <main class="container">
     <section class="grid">
       <article class="card">
-        <img src="elote-volcan.jpg" />
+        <img src="elote-volcan.jpg" alt="Elote Volcán" />
         <div class="body">
           <h3 class="name">Elote Volcán</h3>
           <p class="price">$85</p>
@@ -115,7 +95,7 @@
       </article>
 
       <article class="card">
-        <img src="papaelote.jpg" />
+        <img src="papaelote.jpg" alt="Papalote" />
         <div class="body">
           <h3 class="name">Papalote</h3>
           <p class="price">$50</p>
@@ -123,7 +103,7 @@
       </article>
 
       <article class="card">
-        <img src="elotesenvaso.jpg" />
+        <img src="Elotesenvaso.jpg" alt="Elote en vaso" />
         <div class="body">
           <h3 class="name">Elote en vaso</h3>
           <p class="price">$35 (8oz) · $45 (10oz) · $55 (12oz)</p>
@@ -131,7 +111,7 @@
       </article>
 
       <article class="card">
-        <img src="maruchan-chorreado.jpg" />
+        <img src="Maruchan-chorreada.jpg" alt="Maruchan Chorreada" />
         <div class="body">
           <h3 class="name">Maruchan Chorreada</h3>
           <p class="price">$120</p>
@@ -139,7 +119,7 @@
       </article>
 
       <article class="card">
-        <img src="elotes-entero.jpg" />
+        <img src="Elotes-entero.jpg" alt="Elote entero" />
         <div class="body">
           <h3 class="name">Elote entero</h3>
           <p class="price">$40</p>
@@ -147,7 +127,7 @@
       </article>
 
       <article class="card">
-        <img src="elote-empanizado.jpg" />
+        <img src="elote-empanizado.jpg" alt="Elote empanizado" />
         <div class="body">
           <h3 class="name">Elote empanizado</h3>
           <p class="price">$50</p>
@@ -155,7 +135,7 @@
       </article>
 
       <article class="card">
-        <img src="elotechorreado.jpg" />
+        <img src="elote-chorreado.jpg" alt="Elote Chorreado" />
         <div class="body">
           <h3 class="name">Elote Chorreado</h3>
           <p class="price">$100</p>
@@ -163,7 +143,7 @@
       </article>
 
       <article class="card">
-        <img src="papi-elote.jpg" />
+        <img src="papi-elote.jpg" alt="PapiElotes" />
         <div class="body">
           <h3 class="name">PapiElotes</h3>
           <p class="price">$65</p>
@@ -173,7 +153,7 @@
   </main>
 
   <footer>
-    © Elotes y Chorreados "Diego"
+    © Elotes y Chorreado
   </footer>
 </body>
 </html>
