@@ -3,34 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menú de Elotes</title>
+  <title>Menú Elotes</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #fff7e6;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
     header {
       background-color: #4CAF50;
       color: white;
-      text-align: center;
-      padding: 15px;
+      padding: 20px;
     }
     header h1 {
       margin: 0;
       font-size: 24px;
     }
     header h2 {
-      margin: 5px 0 10px;
+      margin: 10px 0 0;
       font-size: 22px;
       font-weight: bold;
       color: #FFD700;
-      letter-spacing: 2px;
+      text-transform: uppercase;
     }
     .whatsapp-btn {
       display: inline-block;
-      margin: 10px auto 20px;
+      margin: 15px auto;
       padding: 12px 20px;
       background-color: #25D366;
       color: white;
@@ -38,9 +38,8 @@
       font-weight: bold;
       text-decoration: none;
       border-radius: 8px;
-      border: 2px solid #1ebe57;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: all 0.2s ease-in-out;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease, background-color 0.3s;
     }
     .whatsapp-btn:hover {
       background-color: #1ebe57;
@@ -48,28 +47,28 @@
     }
     .menu {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       gap: 20px;
       padding: 20px;
     }
-    .card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      width: 300px;
-      text-align: center;
+    .item {
+      background: white;
       padding: 15px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    .card img {
-      max-width: 100%;
+    .item img {
+      width: 100%;
       border-radius: 10px;
       margin-bottom: 10px;
-      display: block;
     }
-    .card h3 {
+    .item h3 {
       margin: 0;
       font-size: 20px;
+      font-weight: bold;
       color: #333;
     }
   </style>
@@ -78,28 +77,54 @@
   <header>
     <h1>Menú</h1>
     <h2>ELOTES Y CHORREADOS "DIEGO"</h2>
-    <a class="whatsapp-btn" href="https://wa.me/526562562920" target="_blank">
-      📲 Haz tu pedido por WhatsApp
-    </a>
   </header>
 
+  <a href="https://wa.me/526562562920?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20elotes" class="whatsapp-btn" target="_blank">
+    📲 Haz tu pedido por WhatsApp
+  </a>
+
   <div class="menu">
-    <div class="card">
-      <img src="Elotes/eloteentero.jpg" alt="Elotes enteros">
-      <h3>Elotes enteros</h3>
-    </div>
-    <div class="card">
-      <img src="Elotes/Elotesenvaso.jpg" alt="Elotes en vaso">
-      <h3>Elotes en vaso</h3>
-    </div>
-    <div class="card">
-      <img src="Elotes/maruchanchorreada.jpg" alt="Maruchan chorreada">
-      <h3>Maruchan chorreada</h3>
-    </div>
-    <div class="card">
-      <img src="Elotes/eloteempanizado.jpg" alt="Elote empanizado">
+
+    <div class="item">
+      <img src="Elote-empanizado.jpg" alt="Elote empanizado">
       <h3>Elote empanizado</h3>
     </div>
+
+    <div class="item">
+      <img src="Elotechorreado.jpg" alt="Elote chorreado">
+      <h3>Elote chorreado</h3>
+    </div>
+
+    <div class="item">
+      <img src="Elotes-entero.jpg" alt="Elotes enteros">
+      <h3>Elotes enteros</h3>
+    </div>
+
+    <div class="item">
+      <img src="Elotesenvaso.jpg" alt="Elotes en vaso" loading="lazy" decoding="async">
+      <h3>Elotes en vaso</h3>
+    </div>
+
+    <div class="item">
+      <img src="Maruchan-chorreada.jpg" alt="Maruchan chorreada">
+      <h3>Maruchan chorreada</h3>
+    </div>
+
+    <div class="item">
+      <img src="elote-volcan.jpg" alt="Elote volcán">
+      <h3>Elote volcán</h3>
+    </div>
+
+    <div class="item">
+      <img src="papaelote.jpg" alt="Papa elote">
+      <h3>Papa elote</h3>
+    </div>
+
+    <div class="item">
+      <img src="papi-elote.jpg" alt="Papi elote">
+      <h3>Papi elote</h3>
+    </div>
+
   </div>
 </body>
 </html>
