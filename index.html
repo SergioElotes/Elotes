@@ -1,12 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elotes y Chorreados</title>
+  <title>Elotes y Chorreado — Menú</title>
+  <style>
+    :root { --maxw:1200px; --gap:16px; --radius:16px; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#fafafa;color:#222}
+    header{padding:24px 16px;text-align:center;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0}
+    header h1{margin:0;font-size:28px}
+    header p{margin:6px 0 0;color:#666}
+    .container{max-width:var(--maxw);margin:0 auto;padding:20px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+      gap:var(--gap);
+    }
+    .card{
+      background:#fff;border:1px solid #eee;border-radius:var(--radius);
+      overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.05);
+      display:flex;flex-direction:column;
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.08)}
+    .card img{width:100%;aspect-ratio:1/1;object-fit:cover}
+    .card .body{padding:12px 14px}
+    .name{font-weight:700;margin:0 0 4px}
+    .price{font-size:18px;font-weight:700;color:#e67e22;margin:0 0 8px}
+    .desc{margin:0;color:#555;font-size:14px;line-height:1.35}
+    footer{text-align:center;color:#888;font-size:12px;padding:28px}
+  </style>
 </head>
 <body>
-  <h1>Elotes y Chorreados</h1>
-  <p>Bienvenido a nuestra página de menú.</p>
+  <header>
+    <h1>Elotes y Chorreado</h1>
+    <p>¡Bienvenido! Elige tu antojo 👇</p>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+
+      <!-- Cambia los SRC por tus nombres reales (ej. IMG-20250927-WA0021.jpg) -->
+      <article class="card">
+        <img src="IMG-20250927-WA0021.jpg" alt="Elote Volcán" />
+        <div class="body">
+          <h3 class="name">Elote Volcán</h3>
+          <p class="price">$85</p>
+          <p class="desc">Elote entero con crema, Cheetos Flamin’ Hot, queso, crema y mayo.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="IMG-20250927-WA0017.jpg" alt="Papalote" />
+        <div class="body">
+          <h3 class="name">Papalote</h3>
+          <p class="price">$50</p>
+          <p class="desc">Papa cocida con elote, queso en polvo, crema y mayonesa.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="IMG-20250927-WA0016.jpg" alt="Elote en vaso" />
+        <div class="body">
+          <h3 class="name">Elote en vaso</h3>
+          <p class="price">$35 (8oz) · $45 (10oz) · $55 (12oz)</p>
+          <p class="desc">Mantequilla, queso en polvo, crema y mayonesa.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="IMG-20250927-WA0020.jpg" alt="Maruchan Chorreada" />
+        <div class="body">
+          <h3 class="name">Maruchan Chorreada</h3>
+          <p class="price">$120</p>
+          <p class="desc">Maruchan con elote, papitas a elegir, queso amarillo y toppings.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="IMG-20250927-WA0019.jpg" alt="Elote entero" />
+        <div class="body">
+          <h3 class="name">Elote entero</h3>
+          <p class="price">$40</p>
+          <p class="desc">Con mantequilla, queso en polvo, crema y mayo.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="IMG-20250927-WA0018.jpg" alt="Elote empanizado" />
+        <div class="body">
+          <h3 class="name">Elote empanizado</h3>
+          <p class="price">$50</p>
+          <p class="desc">Elote con crema o mayonesa y polvo de Cheetos flamming.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="IMG-20250927-WA0022.jpg" alt="Elote Chorreado" />
+        <div class="body">
+          <h3 class="name">Elote Chorreado</h3>
+          <p class="price">$100</p>
+          <p class="desc">Vaso de elote sobre papitas, queso amarillo, queso en polvo, crema y mayo.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="IMG-20250927-WA0023.jpg" alt="PapiElotes" />
+        <div class="body">
+          <h3 class="name">PapiElotes</h3>
+          <p class="price">$65</p>
+          <p class="desc">Bolsa de papitas con elote, queso amarillo, queso en polvo, crema y mayo.</p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>© Elotes y Chorreado</footer>
 </body>
 </html>
