@@ -2,63 +2,96 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elotes y Chorreados "Diego" — Menú</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elotes y Chorreados "Diego"</title>
   <style>
-    :root { --maxw:1200px; --gap:16px; --radius:16px; }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#fafafa;color:#222}
-    header{padding:24px 16px;text-align:center;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:100}
-    header h1{margin:0;font-size:28px}
-    header p{margin:6px 0 0;color:#666}
-    .container{max-width:var(--maxw);margin:0 auto;padding:20px}
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
-      gap:var(--gap);
+    :root {
+      --maxw: 1200px;
+      --gap: 16px;
     }
-    .card{
-      background:#fff;border:1px solid #eee;border-radius:var(--radius);
-      overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.05);
-      display:flex;flex-direction:column;
-      transition:transform .12s ease, box-shadow .12s ease;
+    * {
+      box-sizing: border-box;
     }
-    .card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.08)}
-    .card img{width:100%;aspect-ratio:1/1;object-fit:cover}
-    .card .body{padding:12px 14px}
-    .name{font-weight:700;margin:0 0 4px}
-    .price{font-size:18px;font-weight:700;color:#e67e22;margin:0 0 8px}
-    .desc{margin:0;color:#555;font-size:14px;line-height:1.35}
-    footer{text-align:center;color:#888;font-size:12px;padding:28px}
-
-    /* Botón flotante de WhatsApp (arriba a la derecha) */
-    .whatsapp {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      background: #25d366;
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f8f8f8;
+    }
+    header {
+      padding: 24px 16px;
+      text-align: center;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header p {
+      margin: 6px 0 0;
+      color: #666;
+      font-size: 18px;
+    }
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 12px;
+      background-color: #25d366;
       color: white;
-      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 25px;
       text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 50px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      font-weight: bold;
+      font-size: 16px;
       transition: background 0.3s;
+    }
+    .whatsapp-button:hover {
+      background-color: #1ebc5b;
+    }
+    .container {
+      max-width: var(--maxw);
+      margin: auto;
+      padding: 16px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--gap);
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      transition: transform .12s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card .body {
+      padding: 12px;
+    }
+    .card .name {
+      margin: 0;
+      font-size: 20px;
+    }
+    .card .price {
+      margin: 6px 0 0;
+      color: #e67e22;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      color: #888;
       font-size: 14px;
-      font-family: Arial, sans-serif;
-      z-index: 2000;
-    }
-    .whatsapp:hover {
-      background: #20b955;
-    }
-
-    @media (max-width: 600px) {
-      .whatsapp {
-        font-size: 13px;
-        padding: 8px 12px;
-        top: 10px;
-        right: 10px;
-      }
+      padding: 16px;
     }
   </style>
 </head>
@@ -66,11 +99,13 @@
   <header>
     <h1>Elotes y Chorreados "Diego"</h1>
     <p>¡Bienvenido! Elige tu antojo 👇</p>
+    <a href="https://wa.me/526562562920" class="whatsapp-button" target="_blank">
+      📱 Haz tu pedido por WhatsApp
+    </a>
   </header>
 
   <main class="container">
     <section class="grid">
-
       <article class="card">
         <img src="elote-volcan.jpg" />
         <div class="body">
@@ -88,7 +123,7 @@
       </article>
 
       <article class="card">
-        <img src="Elotesenvaso.jpg" />
+        <img src="elotesenvaso.jpg" />
         <div class="body">
           <h3 class="name">Elote en vaso</h3>
           <p class="price">$35 (8oz) · $45 (10oz) · $55 (12oz)</p>
@@ -96,7 +131,7 @@
       </article>
 
       <article class="card">
-        <img src="Maruchan-chorreada.jpg" />
+        <img src="maruchan-chorreado.jpg" />
         <div class="body">
           <h3 class="name">Maruchan Chorreada</h3>
           <p class="price">$120</p>
@@ -104,7 +139,7 @@
       </article>
 
       <article class="card">
-        <img src="Elotes-entero.jpg" />
+        <img src="elotes-entero.jpg" />
         <div class="body">
           <h3 class="name">Elote entero</h3>
           <p class="price">$40</p>
@@ -112,7 +147,7 @@
       </article>
 
       <article class="card">
-        <img src="Elote-empanizado.jpg" />
+        <img src="elote-empanizado.jpg" />
         <div class="body">
           <h3 class="name">Elote empanizado</h3>
           <p class="price">$50</p>
@@ -120,7 +155,7 @@
       </article>
 
       <article class="card">
-        <img src="Elotechorreado.jpg" />
+        <img src="elotechorreado.jpg" />
         <div class="body">
           <h3 class="name">Elote Chorreado</h3>
           <p class="price">$100</p>
@@ -134,16 +169,11 @@
           <p class="price">$65</p>
         </div>
       </article>
-
     </section>
   </main>
 
-  <footer>© Elotes y Chorreados "Diego"</footer>
-
-  <!-- Botón de WhatsApp (arriba a la derecha) -->
-  <a href="https://wa.me/526562562920?text=Hola%2C%20quiero%20hacer%20un%20pedido%20🌽" 
-     class="whatsapp" target="_blank">
-     📲 Haz tu pedido por WhatsApp
-  </a>
+  <footer>
+    © Elotes y Chorreados "Diego"
+  </footer>
 </body>
 </html>
