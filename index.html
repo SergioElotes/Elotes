@@ -20,86 +20,95 @@
       font-size: 24px;
       font-weight: bold;
     }
+    .btn-whatsapp {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 10px 20px;
+      margin: 15px auto;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
     .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       margin: 20px;
     }
     .item {
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      margin: 20px auto;
-      max-width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 10px;
       padding: 15px;
+      width: 250px;
     }
     .item img {
-      max-width: 100%;
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
       border-radius: 10px;
     }
     .item h3 {
-      margin: 10px 0 5px;
-    }
-    .btn-whatsapp {
-      display: inline-block;
-      margin: 15px;
-      padding: 12px 20px;
-      background: #25D366;
-      color: white;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-    .btn-whatsapp:hover {
-      background: #1ebe5a;
+      margin-top: 10px;
+      font-size: 20px;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <header>Menú</header>
+  <header>
+    Menú
+  </header>
 
-  <a href="https://wa.me/526562562920?text=Hola%20quiero%20hacer%20un%20pedido%20de%20elotes" class="btn-whatsapp" target="_blank">
+  <a href="https://wa.me/526562562920" target="_blank" class="btn-whatsapp">
     Haz tu pedido por WhatsApp
   </a>
 
   <div class="menu">
+
     <div class="item">
-      <img src="imagen/Elote-empanizado.jpg" alt="Elote empanizado">
+      <img src="elote-empanizado.jpg" alt="Elote empanizado">
       <h3>Elote empanizado</h3>
     </div>
 
     <div class="item">
-      <img src="imagen/Elotechorreado.jpg" alt="Elote chorreado">
+      <img src="elotes-chorreados.jpg" alt="Elote chorreado">
       <h3>Elote chorreado</h3>
     </div>
 
     <div class="item">
-      <img src="imagen/Elotes-entero.jpg" alt="Elotes enteros">
+      <img src="elotes-enteros.jpg" alt="Elotes enteros">
       <h3>Elotes enteros</h3>
     </div>
 
     <div class="item">
-      <img src="imagen/Elotesenvaso.jpg" alt="Elotes en vaso">
+      <img src="elotes-en-vaso.jpg" alt="Elotes en vaso">
       <h3>Elotes en vaso</h3>
     </div>
 
     <div class="item">
-      <img src="imagen/Maruchan-chorreada.jpg" alt="Maruchan chorreada">
+      <img src="maruchan-chorreada.jpg" alt="Maruchan chorreada">
       <h3>Maruchan chorreada</h3>
     </div>
 
     <div class="item">
-      <img src="imagen/elote-volcan.jpg" alt="Elote volcán">
+      <img src="elote-volcan.jpg" alt="Elote volcán">
       <h3>Elote volcán</h3>
     </div>
 
     <div class="item">
-      <img src="imagen/papaelote.jpg" alt="Papa elote">
+      <img src="papaelote.jpg" alt="Papa elote">
       <h3>Papa elote</h3>
     </div>
 
     <div class="item">
-      <img src="imagen/papi-elote.jpg" alt="Papi elote">
+      <img src="papi-elote.jpg" alt="Papi elote">
       <h3>Papi elote</h3>
     </div>
+
   </div>
 </body>
 </html>
