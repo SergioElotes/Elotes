@@ -8,7 +8,7 @@
     :root { --maxw:1200px; --gap:16px; --radius:16px; }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#fafafa;color:#222}
-    header{padding:24px 16px;text-align:center;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0}
+    header{padding:24px 16px;text-align:center;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:100}
     header h1{margin:0;font-size:28px}
     header p{margin:6px 0 0;color:#666}
     .container{max-width:var(--maxw);margin:0 auto;padding:20px}
@@ -30,6 +30,36 @@
     .price{font-size:18px;font-weight:700;color:#e67e22;margin:0 0 8px}
     .desc{margin:0;color:#555;font-size:14px;line-height:1.35}
     footer{text-align:center;color:#888;font-size:12px;padding:28px}
+
+    /* Botón flotante de WhatsApp (arriba a la derecha) */
+    .whatsapp {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: #25d366;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 50px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      z-index: 2000;
+    }
+    .whatsapp:hover {
+      background: #20b955;
+    }
+
+    @media (max-width: 600px) {
+      .whatsapp {
+        font-size: 13px;
+        padding: 8px 12px;
+        top: 10px;
+        right: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -108,6 +138,12 @@
     </section>
   </main>
 
-  <footer>© Elotes y Chorreado</footer>
+  <footer>© Elotes y Chorreados "Diego"</footer>
+
+  <!-- Botón de WhatsApp (arriba a la derecha) -->
+  <a href="https://wa.me/526562562920?text=Hola%2C%20quiero%20hacer%20un%20pedido%20🌽" 
+     class="whatsapp" target="_blank">
+     📲 Haz tu pedido por WhatsApp
+  </a>
 </body>
 </html>
