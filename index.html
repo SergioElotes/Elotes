@@ -1,80 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Menú de Elotes</title>
-<style>
-  :root{--verde:#2ecc71;--bg:#fff4cf;--card:#fff;--txt:#222}
-  *{box-sizing:border-box}
-  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--txt)}
-  header{position:sticky;top:0;z-index:10;background:#34a853;color:#fff;padding:18px 16px;display:flex;align-items:center;gap:12px}
-  header h1{margin:0;font-size:28px;font-weight:800;letter-spacing:.5px}
-  .cta{margin-left:auto;display:inline-flex;align-items:center;gap:8px;background:var(--verde);color:#fff;
-       padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,.15)}
-  .wrap{max-width:1100px;margin:20px auto;padding:0 16px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-  .card{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 3px 10px rgba(0,0,0,.08)}
-  .card img{width:100%;height:180px;object-fit:cover;border-radius:12px;display:block;background:#eee}
-  .card h3{margin:10px 0 0;font-size:20px}
-  footer{margin:30px 0 26px;text-align:center;color:#666;font-size:14px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú de Elotes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff8e1;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: #4CAF50;
+      padding: 15px;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .menu {
+      margin: 20px;
+    }
+    .item {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 350px;
+      padding: 15px;
+    }
+    .item img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .item h3 {
+      margin: 10px 0 5px;
+    }
+    .btn-whatsapp {
+      display: inline-block;
+      margin: 15px;
+      padding: 12px 20px;
+      background: #25D366;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .btn-whatsapp:hover {
+      background: #1ebe5a;
+    }
+  </style>
 </head>
 <body>
+  <header>Menú</header>
 
-<header>
-  <h1>Menú</h1>
-  <a class="cta" href="https://wa.me/526562562920?text=%C2%A1Hola!%20Quiero%20hacer%20un%20pedido%20de%20elotes%20%E2%98%95%EF%B8%8F%F0%9F%8D%9D" target="_blank" rel="noopener">
+  <a href="https://wa.me/526562562920?text=Hola%20quiero%20hacer%20un%20pedido%20de%20elotes" class="btn-whatsapp" target="_blank">
     Haz tu pedido por WhatsApp
   </a>
-</header>
 
-<main class="wrap">
-  <section class="grid">
-
-    <article class="card">
-      <img src="imagen/Elote-empanizado.jpg" alt="Elote empanizado">
+  <div class="menu">
+    <div class="item">
+      <img src="./imagen/Elote-empanizado.jpg" alt="Elote empanizado">
       <h3>Elote empanizado</h3>
-    </article>
+    </div>
 
-    <article class="card">
-      <img src="imagen/Elotechorreado.jpg" alt="Elote chorreado">
+    <div class="item">
+      <img src="./imagen/Elotechorreado.jpg" alt="Elote chorreado">
       <h3>Elote chorreado</h3>
-    </article>
+    </div>
 
-    <article class="card">
-      <img src="imagen/Elotes-entero.jpg" alt="Elotes enteros">
+    <div class="item">
+      <img src="./imagen/Elotes-entero.jpg" alt="Elotes enteros">
       <h3>Elotes enteros</h3>
-    </article>
+    </div>
 
-    <article class="card">
-      <img src="imagen/Elotesenvaso.jpg" alt="Elotes en vaso">
+    <div class="item">
+      <img src="./imagen/Elotesenvaso.jpg" alt="Elotes en vaso">
       <h3>Elotes en vaso</h3>
-    </article>
+    </div>
 
-    <article class="card">
-      <img src="imagen/Maruchan-chorreada.jpg" alt="Maruchan chorreada">
+    <div class="item">
+      <img src="./imagen/Maruchan-chorreada.jpg" alt="Maruchan chorreada">
       <h3>Maruchan chorreada</h3>
-    </article>
+    </div>
 
-    <article class="card">
-      <img src="imagen/elote-volcan.jpg" alt="Elote volcán">
+    <div class="item">
+      <img src="./imagen/elote-volcan.jpg" alt="Elote volcán">
       <h3>Elote volcán</h3>
-    </article>
+    </div>
 
-    <article class="card">
-      <img src="imagen/papaelote.jpg" alt="Papa elote">
+    <div class="item">
+      <img src="./imagen/papaelote.jpg" alt="Papa elote">
       <h3>Papa elote</h3>
-    </article>
+    </div>
 
-    <article class="card">
-      <img src="imagen/papi-elote.jpg" alt="Papi elote">
+    <div class="item">
+      <img src="./imagen/papi-elote.jpg" alt="Papi elote">
       <h3>Papi elote</h3>
-    </article>
-
-  </section>
-</main>
-
-<footer>© 2025 Elotes y Chorreados</footer>
+    </div>
+  </div>
 </body>
 </html>
